@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+            
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101012;
+}
+
+.header img {
+    height: 100%;
+    width: 30%;
+    margin-left: 35%;
+}
+
+@media screen and (max-width: 480px) {
+    .header img {
+        width: 70%;
+        height: 100%;
+        margin-left: 55px;
+    }
+}
+
+
+.barra {
+    height: 80px;
+    width: 100%;
+    background-color: grey;
+    font-size: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 5px solid white;
+}
+
+@media screen and (max-width: 480px) {
+    .barra {
+        height: 180px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.barra h1{
+    float: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 480px){
+    .barra h1 {
+        margin-left: 80px;
+    }
+}
+
+.barra nav {
+    float: right;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 480px){
+    .barra nav{
+        margin-top: 1rem;
+        font-size: 17px;
+    }
+}
+
+.barra ul li{
+    display: inline-block;
+}
+
+.barra a{
+    text-decoration: none;
+    color: #101012;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+
+.barra nav a:hover {
+    color: #333;
+}
+
+.barra .button {
+    background: rgb(54, 53, 53);
+    color: #fff;
+    font-family: monospace;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    margin:20px ;
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 3px 0px black;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    
+}
+
+.barra .button:hover {
+    box-shadow: 0px 3px 0px black;
+    text-decoration: none;
+    
+    
+}
+
+
+.quienesSomos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(grey,#101012 );
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 200px;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .quienesSomos{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.quienesSomos h2 {
+    color: whitesmoke;
+    
+}
+
+.quienesSomos p {
+    width: 700px;
+    height: 100%;
+    text-align: center;
+    color: antiquewhite;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .quienesSomos p {
+        width: 450px;
+        height: 100%;
+        font-size: 1rem;
+    }
+}
+
+.quienesSomos img {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin-top: 2rem;
+} 
+
+@media screen and (max-width: 480px) {
+    .quienesSomos img {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        margin-top: 2rem;
+    } 
+}
+
+
+
+.quienesSomos .button {
+    background: grey;
+    color: #fff;
+    font-family: monospace;
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    margin:20px ;
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 3px 0px black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50PX;
+}
+
+.quienesSomos .button:hover {
+    box-shadow: 0px 3px 0px black;
+    text-decoration: none;
+    
+    
+}
+
+.contenedorGaleria {
+    background-color: #101012;
+}
+
+.contenedorGaleria h1 {
+    font-family: monospace;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+.contenedorGaleria h3 {
+    font-family: monospace;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.contenedorGaleria .galeria { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 90%;
+    margin: auto;
+    grid-gap: 30px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.contenedorGaleria .galeria img {
+    width: 100%;
+    vertical-align: top;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ;
+}
+
+.contenedorGaleria  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.contenedorGaleria a:hover img {
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+
+.ligth-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.ligth-box img{
+    width: 75vh;
+    max-height: 70vh;
+}
+
+.ligth-box:target {
+    transform: scale(1);
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: grey;
+    color: black;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next {
+    display: block;
+    background: grey;
+    color: black;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+.preguntasFrecuentes {
+    background-color: linear-gradient(#101012, #101012, grey);
+    font-family: monospace;
+    font-size: 25px;
+    padding: 2rem;
+    
+}
+.faqs { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#101012, #101012, grey);
+    height: 100vh;
+    }
+
+.faqs img {
+    width: auto;
+    height: 20rem;
+    padding: 5%;
+    }
+
+
+.preguntasFrecuentes h1{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px){
+    .preguntasFrecuentes h1{
+        font-size:25px ;
+    }
+}
+.preguntasFrecuentes h2 {
+    color: whitesmoke;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+}
+@media screen and (max-width: 480px){
+    .preguntasFrecuentes h2{
+        font-size: 25px;
+    }
+}
+
+.preguntasFrecuentes h3 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px){
+    .preguntasFrecuentes h3{
+        font-size: 20px;
+    }
+}
+
+.preguntasFrecuentes p {
+    color: white;
+}
+
+@media screen and (max-width: 480px){
+    .preguntasFrecuentes p{
+        font-size: 20px;
+    }
+}
+
+.contacto {
+    background: linear-gradient(#101012,#101012, grey);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 150px;
+    
+}
+
+@media screen and (max-width: 480px){
+    .contacto{
+        flex-direction: column;
+        
+    }
+}
+
+.contacto form {
+    width: 400px;
+    height: auto;
+    background:rgba(0,0,0,0.5);
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 0 0 20px grey;
+    
+}
+@media screen and (max-width: 480px){
+        .contacto form{
+            margin-right: 60px;
+        }
+
+}
+
+.contacto h2{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color:white ;
+        text-decoration: underline;
+        margin-bottom: 10px;
+        text-align: center;
+}
+
+.contacto textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.ubicacion {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.ubicacion h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color:white ;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ubicacion iframe {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 480px){
+    .ubicacion iframe{
+        margin-right: 60px;
+    }
+}
+
+
+.redesSociales {
+    height: 120px;
+    width: 100%;
+    background-color: grey;
+    font-size: 25px;
+    
+    
+}
+
+.redesSociales p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.iconos {
+    text-align: center;
+    font-size: 70px;
+    
+    letter-spacing: 20px;
+}
+
+.subir {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px white;
+}
+
+
+.registro { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#101012, #101012, grey);
+    height: 100vh;
+    }
+
+.registro img {
+    width: auto;
+    height: 20rem;
+    padding: 5%;
+    }
+
+
+.formulario {
+        width: 600px;
+        height: auto;
+        background: rgba(0,0,0,0.4);
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border-radius: 7px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+}
+
+.formulario h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color:white ;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    text-align: center;
+ }
+
+.formulario button {
+    cursor: pointer;
+}
+
+.formulario input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.formulario p {
+    color:white;
+}
+ .formulario a{
+    color:rgb(82, 82, 248);
+}
