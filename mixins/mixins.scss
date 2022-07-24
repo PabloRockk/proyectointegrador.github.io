@@ -1,0 +1,13 @@
+@mixin fontTitle {
+    font-family: monospace;
+text-align: center;
+color: whitesmoke;
+font-size: 40px;
+} 
+
+@mixin fontSubTitle {
+    font-family: monospace;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 30px;
+}
